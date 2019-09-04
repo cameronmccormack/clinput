@@ -50,10 +50,3 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please enter an integer "
                                          "greater than zero.\nEnter: ")
         assert value == 1
-
-    def test_none(self):
-        """Test a null input."""
-        sys.stdin = StringIO(None)
-        sys.stdout = StringIO()
-        value = natural("Enter: ")
-        assert value = None
