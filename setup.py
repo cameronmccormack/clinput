@@ -1,10 +1,7 @@
-# help - https://github.com/pypa/sampleproject/blob/master/setup.py
-
-from setuptools import setup, find_packages
+from setuptools import setup
 from os import path
 
 here = path.abspath(path.dirname(__file__))
-
 with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
@@ -19,8 +16,7 @@ setup(
     author_email="cam.mac@live.co.uk",
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Intended Audience :: Developers",  # check this one
-        "Topic :: Software Development",
+        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.5",
@@ -28,9 +24,9 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     keywords="command line input",
-    packages=find_packages(),  # check this one
-    python_requires=">=3.5",  # check this one
-    install_requires=[],  # add requirements.txt here?
+    packages=["clinput"],
+    python_requires=">=3.5",
+    install_requires=[],
     extras_require={
         "test": ["pytest"]
     },
