@@ -23,6 +23,11 @@ def natural(message, err="Please enter an integer greater than zero.",
         # user input
         data = input(message)
 
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
+
         # if decimal point is present, cannot be integer
         if "." in data:
             print(err)
@@ -60,6 +65,11 @@ def integer(message, err="Please enter an integer."):
         # user input
         data = input(message)
 
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
+
         # if decimal point is present, cannot be integer
         if "." in data:
             print(err)
@@ -92,6 +102,11 @@ def number(message, err="Please enter a number."):
         # user input
         data = input(message)
 
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
+
         # if input cannot be converted to float, cannot be number
         try:
             data = float(data)
@@ -120,7 +135,7 @@ def string(message, err="Please provide an input."):
         data = input(message)
 
         # if blank, error. otherwise, return input string
-        if data == "":
+        if data.strip() == "":
             print(err)
             continue
         return data
@@ -141,6 +156,11 @@ def boolean(message, err="Please enter 1 (True) or 0 (False)."):
     while True:
         # user input
         data = input(message)
+
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
 
         # if 1, return True. if 0, return false. else, error and loop
         if data == "1":
@@ -167,6 +187,11 @@ def positive(message, err="Please enter a positive number.", zero=True):
     while True:
         # user input
         data = input(message)
+
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
 
         # if input cannot be converted to float, cannot be a valid number
         try:
@@ -208,6 +233,11 @@ def negative(message, err="Please enter a negative number.", zero=True):
         # user input
         data = input(message)
 
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
+
         # if input cannot be converted to float, cannot be a valid number
         try:
             data = float(data)
@@ -246,6 +276,11 @@ def custom(message, allowed, err="Invalid input."):
     while True:
         # user input
         data = input(message)
+
+        # if blank, error
+        if data.strip() == "":
+            print("Please provide an input.")
+            continue
 
         # check if input is in allowed range. if not, error and loop
         if data in allowed:
