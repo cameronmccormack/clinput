@@ -4,7 +4,7 @@ from clinput.single import number
 
 
 class TestNumber:
-    """Unit tests for the integer function for single user input."""
+    """Unit tests for the number function for single user input."""
     def test_one(self):
         """Test an input of 1."""
         sys.stdin = StringIO("1")

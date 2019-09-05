@@ -3,8 +3,8 @@ import sys
 from clinput.single import positive
 
 
-class TestNumber:
-    """Unit tests for the integer function for single user input."""
+class TestPositive:
+    """Unit tests for the positive function for single user input."""
     def test_one_true(self):
         """Test an input of 1 where zero is included."""
         sys.stdin = StringIO("1")
