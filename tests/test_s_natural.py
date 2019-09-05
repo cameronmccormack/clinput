@@ -12,6 +12,7 @@ class TestNatural:
         value = natural("Enter: ")
         assert sys.stdout.getvalue() == "Enter: "
         assert value == 1
+        assert type(value) is int
 
     def test_one_true(self):
         """Test an input of 1 for natural numbers greater than or equal to
@@ -22,6 +23,7 @@ class TestNatural:
         value = natural("Enter: ", zero=True)
         assert sys.stdout.getvalue() == "Enter: "
         assert value == 1
+        assert type(value) is int
 
     def test_zero_false(self):
         """Test an input of 0 for natural numbers greater than zero."""
@@ -31,6 +33,7 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please enter an integer "
                                          "greater than zero.\nEnter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_zero_true(self):
         """Test an input of 1 for natural numbers greater than or equal to
@@ -41,6 +44,7 @@ class TestNatural:
         value = natural("Enter: ", zero=True)
         assert sys.stdout.getvalue() == "Enter: "
         assert value == 0
+        assert type(value) is int
 
     def test_blank(self):
         """Test a blank input."""
@@ -50,6 +54,7 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please provide an input."
                                          "\nEnter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_big(self):
         """Test a really big number."""
@@ -58,6 +63,7 @@ class TestNatural:
         value = natural("Enter: ")
         assert sys.stdout.getvalue() == "Enter: "
         assert value == 835013851341353317591735386482
+        assert type(value) is int
 
     def test_negative(self):
         """Test a negative integer."""
@@ -67,6 +73,7 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please enter an integer "
                                          "greater than zero.\nEnter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_string(self):
         """Test a non-number string."""
@@ -76,6 +83,7 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please enter an integer "
                                          "greater than zero.\nEnter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_float(self):
         """Test a non-integer positive number."""
@@ -85,6 +93,7 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please enter an integer "
                                          "greater than zero.\nEnter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_round_float(self):
         """Test a floating point whole number (this should not be accepted)."""
@@ -94,6 +103,7 @@ class TestNatural:
         assert sys.stdout.getvalue() == ("Enter: Please enter an integer "
                                          "greater than zero.\nEnter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_multi_error(self):
         """Test multiple errors in a row."""
@@ -108,6 +118,7 @@ class TestNatural:
                                          "greater than zero.\n"
                                          "Enter: ")
         assert value == 1
+        assert type(value) is int
 
     def test_custom_msg(self):
         """Test custom error message."""
@@ -116,3 +127,4 @@ class TestNatural:
         value = natural("Enter: ", err="No, not that!")
         assert sys.stdout.getvalue() == "Enter: No, not that!\nEnter: "
         assert value == 1
+        assert type(value) is int
