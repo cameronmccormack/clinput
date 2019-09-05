@@ -2,9 +2,9 @@
 
 ## clinput.single module
 
-`clinput.single.natural`(message, err="Please enter an integer greater than zero.", zero=False)
+`clinput.single.natural(message, err="Please enter an integer greater than zero.", zero=False)`
 
-> Command line input and error checking for natural numbers.
+**Command line input and error checking for natural numbers.**
 
 Args:
 
