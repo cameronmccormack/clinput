@@ -61,13 +61,22 @@ class TestNumber:
         assert value == 1.0
         assert type(value) is float
 
-    def test_float(self):
+    def test_float_positive(self):
         """Test a non-integer positive number."""
         sys.stdin = StringIO("4.6")  # last input 1 to break input loop
         sys.stdout = StringIO()
         value = number("Enter: ")
         assert sys.stdout.getvalue() == "Enter: "
         assert value == 4.6
+        assert type(value) is float
+
+    def test_float_negative(self):
+        """Test a non-integer negative number."""
+        sys.stdin = StringIO("-87.65")  # last input 1 to break input loop
+        sys.stdout = StringIO()
+        value = number("Enter: ")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == -87.65
         assert type(value) is float
 
     def test_round_float(self):
