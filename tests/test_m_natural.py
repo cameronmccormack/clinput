@@ -160,3 +160,13 @@ class TestNatural:
         assert value == [1]
         for val in value:
             assert type(val) is int
+
+    def test_different_sep(self):
+        """Test separating character other than sep."""
+        sys.stdin = StringIO("1|2|3|4")
+        sys.stdout = StringIO()
+        value = natural("Enter: ", sep="|")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == [1, 2, 3, 4]
+        for val in value:
+            assert type(val) is int

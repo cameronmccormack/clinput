@@ -3,7 +3,7 @@ import sys
 from clinput.multi import number
 
 
-class TestNatural:
+class TestNumber:
     """Unit tests for the number function for multiple user input."""
     def test_one(self):
         """Test an input of 1."""
@@ -122,5 +122,15 @@ class TestNatural:
                                          "No, not that!\n"
                                          "Enter: ")
         assert value == [1]
+        for val in value:
+            assert type(val) is float
+
+    def test_different_sep(self):
+        """Test separating character other than sep."""
+        sys.stdin = StringIO("1|2|3|4")
+        sys.stdout = StringIO()
+        value = number("Enter: ", sep="|")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == [1, 2, 3, 4]
         for val in value:
             assert type(val) is float
