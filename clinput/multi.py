@@ -24,6 +24,11 @@ def natural(message, err="Please only enter positive integers.",
         # user input
         data = input(message)
 
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
+
         # split input using the separation character (space by default)
         split = data.split(sep)
 
@@ -87,6 +92,11 @@ def integer(message, err="Please only enter integers.", sep=" "):
         # user input
         data = input(message)
 
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
+
         # split input using the separation character (space by default)
         split = data.split(sep)
 
@@ -144,6 +154,11 @@ def number(message, err="Please only enter numbers.", sep=" "):
         # user input
         data = input(message)
 
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
+
         # split input using the separation character (space by default)
         split = data.split(sep)
 
@@ -196,6 +211,11 @@ def boolean(message, err="Please only enter 1s (True) or 0s (False).",
     while True:
         # user input
         data = input(message)
+
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
 
         # split input using the separation character (space by default)
         split = data.split(sep)
@@ -253,6 +273,11 @@ def positive(message, err="Please only enter positive numbers.",
     while True:
         # user input
         data = input(message)
+
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
 
         # split input using the separation character (space by default)
         split = data.split(sep)
@@ -320,6 +345,11 @@ def negative(message, err="Please only enter negative numbers.",
         # user input
         data = input(message)
 
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
+
         # split input using the separation character (space by default)
         split = data.split(sep)
 
@@ -383,6 +413,11 @@ def custom(message, allowed, err="Invalid input.", sep=" "):
     while True:
         # user input
         data = input(message)
+
+        # error if no input
+        if data == "":
+            print("Please provide an input.")
+            continue
 
         # split input using the separation character (space by default)
         split = data.split(sep)
