@@ -3,7 +3,7 @@ import sys
 from clinput.multi import boolean
 
 
-class TestNumber:
+class TestBoolean:
     """Unit tests for the boolean function for multiple user input."""
     def test_one(self):
         """Test an input of 1."""
