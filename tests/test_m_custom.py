@@ -109,3 +109,23 @@ class TestCustom:
         assert value == ["1", "2", "3"]
         for val in value:
             assert type(val) is str
+
+    def test_spaces(self, custom_data):
+        """Test valid inputs with extra spaces."""
+        sys.stdin = StringIO("spam    ham     eggs")
+        sys.stdout = StringIO()
+        value = custom("Enter: ", custom_data)
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == ["spam", "ham", "eggs"]
+        for val in value:
+            assert type(val) is str
+
+    def test_spaces_sep(self, custom_data):
+        """Test valid inputs with extra spaces and a custom sep character."""
+        sys.stdin = StringIO("spam  ,  ham ,    eggs")
+        sys.stdout = StringIO()
+        value = custom("Enter: ", custom_data, sep=",")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == ["spam", "ham", "eggs"]
+        for val in value:
+            assert type(val) is str

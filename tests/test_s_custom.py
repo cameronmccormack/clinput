@@ -68,3 +68,12 @@ class TestCustom:
         assert sys.stdout.getvalue() == "Enter: No, not that!\nEnter: "
         assert value == "3"
         assert type(value) is str
+
+    def test_spaces(self, custom_data):
+        """Test whitespace on valid input."""
+        sys.stdin = StringIO("  eggs   ")
+        sys.stdout = StringIO()
+        value = custom("Enter: ", custom_data)
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == "eggs"
+        assert type(value) is str

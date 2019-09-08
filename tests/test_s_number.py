@@ -108,3 +108,12 @@ class TestNumber:
         assert sys.stdout.getvalue() == "Enter: No, not that!\nEnter: "
         assert value == 1.0
         assert type(value) is float
+
+    def test_spaces(self):
+        """Test whitespace on valid input."""
+        sys.stdin = StringIO("  1   ")
+        sys.stdout = StringIO()
+        value = number("Enter: ")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == 1
+        assert type(value) is float

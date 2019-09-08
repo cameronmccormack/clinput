@@ -104,3 +104,23 @@ class TestBoolean:
         assert value == [True, False, False]
         for val in value:
             assert type(val) is bool
+
+    def test_spaces(self):
+        """Test valid inputs with extra spaces."""
+        sys.stdin = StringIO("1  0  1  0 0")
+        sys.stdout = StringIO()
+        value = boolean("Enter: ")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == [True, False, True, False, False]
+        for val in value:
+            assert type(val) is bool
+
+    def test_spaces_sep(self):
+        """Test valid inputs with extra spaces with a custom sep character."""
+        sys.stdin = StringIO(" 1 , 0 , 1 , 0 ,0 ")
+        sys.stdout = StringIO()
+        value = boolean("Enter: ", sep=",")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == [True, False, True, False, False]
+        for val in value:
+            assert type(val) is bool

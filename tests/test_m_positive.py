@@ -160,3 +160,23 @@ class TestPositive:
         assert value == [1, 2, 3, 4]
         for val in value:
             assert type(val) is float
+
+    def test_spaces(self):
+        """Test valid inputs with extra spaces."""
+        sys.stdin = StringIO("  1   2  3     4  ")
+        sys.stdout = StringIO()
+        value = positive("Enter: ")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == [1, 2, 3, 4]
+        for val in value:
+            assert type(val) is float
+
+    def test_spaces_sep(self):
+        """Test valid inputs with extra spaces and custom sep character."""
+        sys.stdin = StringIO("  1 ,  2,  3 ,    4  ")
+        sys.stdout = StringIO()
+        value = positive("Enter: ", sep=",")
+        assert sys.stdout.getvalue() == "Enter: "
+        assert value == [1, 2, 3, 4]
+        for val in value:
+            assert type(val) is float
