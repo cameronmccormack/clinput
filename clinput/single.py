@@ -22,9 +22,10 @@ def natural(message, err="Please enter an integer greater than zero.",
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 
@@ -64,9 +65,10 @@ def integer(message, err="Please enter an integer."):
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 
@@ -101,9 +103,10 @@ def number(message, err="Please enter a number."):
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 
@@ -129,7 +132,8 @@ def string(message, err="Please provide an input."):
     Returns:
         string: The first sucessfully input string.
     """
-    # loop until valid input given
+    # loop until valid input given (spaces are not stripped for string
+    # function, unlike other single functions)
     while True:
         # user input
         data = input(message)
@@ -156,9 +160,10 @@ def boolean(message, err="Please enter 1 (True) or 0 (False)."):
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 
@@ -187,9 +192,10 @@ def positive(message, err="Please enter a positive number.", zero=True):
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 
@@ -232,9 +238,10 @@ def negative(message, err="Please enter a negative number.", zero=True):
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 
@@ -276,9 +283,10 @@ def custom(message, allowed, err="Invalid input."):
     while True:
         # user input
         data = input(message)
+        data = data.strip()
 
         # if blank, error
-        if data.strip() == "":
+        if data == "":
             print("Please provide an input.")
             continue
 

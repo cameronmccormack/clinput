@@ -29,8 +29,10 @@ def natural(message, err="Please only enter positive integers.",
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
 
         # check each item in the list
         split = __check_natural(split, minimum)
@@ -97,8 +99,11 @@ def integer(message, err="Please only enter integers.", sep=" "):
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
+
 
         # check each item in the list
         split = __check_integer(split)
@@ -159,8 +164,10 @@ def number(message, err="Please only enter numbers.", sep=" "):
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
 
         # check each item in the list
         split = __check_number(split)
@@ -217,8 +224,10 @@ def boolean(message, err="Please only enter 1s (True) or 0s (False).",
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
 
         # check each item in the list
         split = __check_boolean(split)
@@ -279,8 +288,10 @@ def positive(message, err="Please only enter positive numbers.",
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
 
         # check each item in the list
         split = __check_positive(split, zero)
@@ -350,8 +361,10 @@ def negative(message, err="Please only enter negative numbers.",
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
 
         # check each item in the list
         split = __check_negative(split, zero)
@@ -419,8 +432,10 @@ def custom(message, allowed, err="Invalid input.", sep=" "):
             print("Please provide an input.")
             continue
 
-        # split input using the separation character (space by default)
+        # split input string by separation character, then strip any whitespace
+        # and remove blank items
         split = data.split(sep)
+        split = [x.strip() for x in split if x]
 
         # check each item in the list
         split = __check_custom(split, allowed)
