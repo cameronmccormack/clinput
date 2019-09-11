@@ -4,8 +4,18 @@ Clinput package
 Submodules
 ----------
 
+Single Input
+~~~~~~~~~~~
+
 .. toctree::
    :maxdepth: 1
 
    single
-   multi
+
+Multiple Input
+~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+
+   mutli
