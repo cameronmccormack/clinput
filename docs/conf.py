@@ -164,6 +164,3 @@ texinfo_documents = [
      author, 'Clinput', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
