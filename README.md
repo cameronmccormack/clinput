@@ -40,7 +40,7 @@ input_vars = clim.positive("Enter a list of positive number inputs: ")
 
 ## Documentation
 
-Documentation can be found in `docs/index.md`.
+Documentation can be found at [Read the Docs](http://clinput.readthedocs.io/).
 
 ## Contributing
 
