@@ -4,18 +4,8 @@ Clinput package
 Submodules
 ----------
 
-clinput\.multi module
----------------------
+.. toctree::
+   :maxdepth: 1
 
-.. automodule:: clinput.multi
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-clinput\.single module
-----------------------
-
-.. automodule:: clinput.single
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   single
+   multi
