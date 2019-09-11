@@ -1,6 +1,7 @@
 def natural(message, err="Please only enter positive integers.",
             zero=False, sep=" "):
     """Command line input and error checking for natural numbers.
+
     Args:
         message (str): The input message displayed in the command line.
         err (str, optional): The message displayed for an erroneous input.
@@ -13,6 +14,7 @@ def natural(message, err="Please only enter positive integers.",
     Returns:
         list of [int,]: The first sucessfully input list of natural numbers.
     """
+
     # check whether natural numbers includes zero (default excludes zero)
     if zero:
         minimum = 0
@@ -55,6 +57,7 @@ def __check_natural(items, minimum):
         list of [int,]: The list of items converted to natural numbers. Returns
             None if any one test fails.
     """
+
     for i, item in enumerate(items):
         # if decimal point is present, cannot be integer
         if "." in item:
@@ -79,6 +82,7 @@ def __check_natural(items, minimum):
 
 def integer(message, err="Please only enter integers.", sep=" "):
     """Command line input and error checking for integers.
+
     Args:
         message (str): The input message displayed in the command line.
         err (str, optional): The message displayed for an erroneous input.
@@ -89,6 +93,7 @@ def integer(message, err="Please only enter integers.", sep=" "):
     Returns:
         list of [int,]: The first sucessfully input list of integers.
     """
+
     # loop until valid input given
     while True:
         # user input
@@ -103,7 +108,6 @@ def integer(message, err="Please only enter integers.", sep=" "):
         # and remove blank items
         split = data.split(sep)
         split = [x.strip() for x in split if x]
-
 
         # check each item in the list
         split = __check_integer(split)
@@ -144,6 +148,7 @@ def __check_integer(items):
 
 def number(message, err="Please only enter numbers.", sep=" "):
     """Command line input and error checking for numbers.
+
     Args:
         message (str): The input message displayed in the command line.
         err (str, optional): The message displayed for an erroneous input.
@@ -204,6 +209,7 @@ def __check_number(items):
 def boolean(message, err="Please only enter 1s (True) or 0s (False).",
             sep=" "):
     """Command line input and error checking for boolean values (1 or 0).
+
     Args:
         message (str): The input message displayed in the command line.
         err (str, optional): The message displayed for an erroneous input.
@@ -214,6 +220,7 @@ def boolean(message, err="Please only enter 1s (True) or 0s (False).",
     Returns:
         list of [bool,]: The first sucessfully input list of boolean values.
     """
+
     # loop until valid input given
     while True:
         # user input
@@ -266,6 +273,7 @@ def __check_boolean(items):
 def positive(message, err="Please only enter positive numbers.",
              zero=True, sep=" "):
     """Command line input and error checking for positive numbers.
+
     Args:
         message (str): The input message displayed in the command line.
         err (str, optional): The message displayed for an erroneous input.
@@ -339,6 +347,7 @@ def __check_positive(items, zero):
 def negative(message, err="Please only enter negative numbers.",
              zero=True, sep=" "):
     """Command line input and error checking for negative numbers.
+
     Args:
         message (str): The input message displayed in the command line.
         err (str, optional): The message displayed for an erroneous input.
@@ -411,6 +420,7 @@ def __check_negative(items, zero):
 
 def custom(message, allowed, err="Invalid input.", sep=" "):
     """Command line input and error checking for user-defined allowable inputs.
+
     Args:
         message (str): The input message displayed in the command line.
         allowed (tuple of (str,)): The allowable user inputs.

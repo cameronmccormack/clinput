@@ -3,8 +3,8 @@ def natural(message, err="Please enter an integer greater than zero.",
     """Command line input and error checking for natural numbers.
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please enter an integer greater than zero.".
         zero (bool, optional): Zero status. True includes zero, False excludes
             zero. Defaults to False.
@@ -54,8 +54,8 @@ def integer(message, err="Please enter an integer."):
     """Command line input and error checking for integers.
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please enter an integer.".
 
     Returns:
@@ -92,8 +92,8 @@ def number(message, err="Please enter a number."):
     """Command line input and error checking for numbers.
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please enter a number.".
 
     Returns:
@@ -125,12 +125,12 @@ def string(message, err="Please provide an input."):
     """Command line input and error checking for strings (error if blank).
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please provide an input.".
 
     Returns:
-        string: The first sucessfully input string.
+        str: The first sucessfully input string.
     """
     # loop until valid input given (spaces are not stripped for string
     # function, unlike other single functions)
@@ -149,8 +149,8 @@ def boolean(message, err="Please enter 1 (True) or 0 (False)."):
     """Command line input and error checking for boolean values (1 or 0).
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please enter 1 (True) or 0 (False).".
 
     Returns:
@@ -179,8 +179,8 @@ def positive(message, err="Please enter a positive number.", zero=True):
     """Command line input and error checking for positive numbers.
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please enter a positive number.".
         zero (bool, optional): Zero status. True includes zero, False excludes
             zero. Defaults to True.
@@ -225,8 +225,8 @@ def negative(message, err="Please enter a negative number.", zero=True):
     """Command line input and error checking for negative numbers.
 
     Args:
-        message (string): The input message displayed in the command line.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Please enter a negative number.".
         zero (bool, optional): Zero status. True includes zero, False excludes
             zero. Defaults to True.
@@ -271,13 +271,13 @@ def custom(message, allowed, err="Invalid input."):
     """Command line input and error checking for user-defined allowable inputs.
 
     Args:
-        message (string): The input message displayed in the command line.
-        allowed (tuple of (string,)): The allowable user inputs.
-        err (string, optional): The message displayed for an erroneous input.
+        message (str): The input message displayed in the command line.
+        allowed (tuple of (str,)): The allowable user inputs.
+        err (str, optional): The message displayed for an erroneous input.
             Defaults to "Invalid input.".
 
     Returns:
-        string: The first sucessfully allowed input string.
+        str: The first sucessfully allowed input string.
     """
     # loop until valid input
     while True:
